@@ -52,4 +52,6 @@ public abstract class BaseActivity extends Activity {
   protected ActivityModule getActivityModule() {
     return new ActivityModule(this);
   }
+
+
 }

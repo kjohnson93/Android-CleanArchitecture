@@ -16,6 +16,8 @@
 package com.fernandocejas.android10.sample.domain.repository;
 
 import com.fernandocejas.android10.sample.domain.User;
+import com.fernandocejas.android10.sample.domain.UserModel;
+
 import java.util.List;
 import rx.Observable;
 
@@ -34,4 +36,5 @@ public interface UserRepository {
    * @param userId The user id used to retrieve user data.
    */
   Observable<User> user(final int userId);
+
 }

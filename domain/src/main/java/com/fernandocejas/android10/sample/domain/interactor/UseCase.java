@@ -15,6 +15,7 @@
  */
 package com.fernandocejas.android10.sample.domain.interactor;
 
+import com.fernandocejas.android10.sample.domain.UserModel;
 import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
 import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
 import rx.Subscriber;
@@ -33,8 +34,8 @@ import rx.subscriptions.Subscriptions;
  */
 public abstract class UseCase {
 
-  private final ThreadExecutor threadExecutor;
-  private final PostExecutionThread postExecutionThread;
+  protected final ThreadExecutor threadExecutor;
+  protected final PostExecutionThread postExecutionThread;
 
   private Subscription subscription = Subscriptions.empty();
 
@@ -71,4 +72,7 @@ public abstract class UseCase {
       subscription.unsubscribe();
     }
   }
+
+
+
 }
